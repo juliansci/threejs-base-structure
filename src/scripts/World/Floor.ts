@@ -14,16 +14,10 @@ export default class Floor {
   constructor() {
     this.app = new App();
     this.scene = this.app.scene;
-    this.geometry = new THREE.PlaneGeometry(5, 5, 100, 100);
+    this.geometry = new THREE.PlaneGeometry(10, 10, 100, 100);
     const colorMap = this.app.resources.items.floorColorTexture;
     colorMap.encoding = THREE.sRGBEncoding;
-    // colorMap.repeat.set(1.5, 1.5);
-    // colorMap.wrapS = THREE.RepeatWrapping;
-    // colorMap.wrapT = THREE.RepeatWrapping;
     const normal = this.app.resources.items.floorNormalTexture;
-    // normal.repeat.set(1.5, 1.5);
-    // normal.wrapS = THREE.RepeatWrapping;
-    // normal.wrapT = THREE.RepeatWrapping;
 
     this.material = new THREE.MeshStandardMaterial({
       map: colorMap,
