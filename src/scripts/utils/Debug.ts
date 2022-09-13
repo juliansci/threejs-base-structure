@@ -1,6 +1,9 @@
 import * as dat from "lil-gui";
 
 export default class Debug {
+  isActive: boolean;
+  gui: dat.GUI;
+
   constructor() {
     this.isActive = window.location.hash === "#debug";
 
