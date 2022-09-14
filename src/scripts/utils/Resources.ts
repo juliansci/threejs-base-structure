@@ -31,10 +31,8 @@ export default class Resources extends EventEmitter {
 
   startLoading() {
     // Load each source
-    console.log(this.sources);
     if (!this.sources || !this.sources.length) {
       setTimeout(() => {
-        console.log("ready 0");
         this.trigger("ready");
       }, 0);
       return;
@@ -58,16 +56,10 @@ export default class Resources extends EventEmitter {
   }
 
   sourceLoaded(source: any, file: string) {
-    console.log(source);
-
     this.items[source.name] = file;
 
     this.loaded++;
-    console.log(this.loaded);
-    console.log(this.toLoad);
     if (this.loaded === this.toLoad) {
-      console.log("ready 1");
-
       this.trigger("ready");
     }
   }
