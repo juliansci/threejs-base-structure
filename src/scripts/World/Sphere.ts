@@ -29,9 +29,6 @@ export default class Sphere {
       aoMap: this.app.resources.items.sphereAOTexture,
       aoMapIntensity: 1,
       roughness: 0.2,
-      //displacementMap: this.app.resources.items.sphereDisplacementTexture,
-      // displacementScale: 0.1,
-      // displacementBias: 0.1,
     });
   }
 
